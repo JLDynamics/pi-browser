@@ -1,0 +1,6 @@
+state/
+shots/
+profile/
+native/panel
+native/panel.old-*
+.DS_Store
