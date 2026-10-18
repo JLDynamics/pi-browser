@@ -1,0 +1,34 @@
+{
+  "ops": {
+    "open":     { "url": "string?", "owner": "string?", "timeout": "number?" },
+    "show":     { "url": "string?", "timeout": "number?" },
+    "goto":     { "url": "string", "timeout": "number?" },
+    "nav":      { "go": "back|forward|reload|stop", "timeout": "number?" },
+    "wait":     { "timeout": "number?" },
+    "state":    {},
+    "blocks":   {},
+    "snapshot": { "root": "string?", "depth": "number?", "nodes": "number?", "mode": "string?", "format": "text|tree?" },
+    "act": {
+      "action": "click|dblclick|hover|fill|press|select|check|uncheck|scroll",
+      "ref": "string?", "text": "string?", "keys": "keys?", "dx": "number?", "dy": "number?",
+      "@requires": { "action": {
+        "click": ["ref"], "dblclick": ["ref"], "hover": ["ref"], "fill": ["ref", "text"],
+        "press": ["ref", "keys"], "select": ["ref", "text"], "check": ["ref"], "uncheck": ["ref"],
+        "scroll": []
+      } }
+    },
+    "eval":     { "function": "string" },
+    "input":    { "events": "events" },
+    "capture":  { "format": "png|jpeg?" },
+    "events":   { "from": "number?" },
+    "viewport": { "width": "number", "height": "number" },
+    "resize":   { "size": "card|medium|full" },
+    "dialogs":  { "policy": "accept|dismiss|default" },
+    "release":  {},
+    "close":    {},
+    "geometry": {},
+    "ping":     {},
+    "quit":     {},
+    "up":       { "url": "string?", "size": "card|medium|full?", "@cli": true }
+  }
+}
